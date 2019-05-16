@@ -1,0 +1,59 @@
+<odoo>
+	<data>
+		<record id="iutclass_action" model="ir.actions.act_window">
+			<field name="name">Classes</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">iut.class</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'search_default_opened':1}</field>
+		</record>
+		<record id ="view_class_tree" model="ir.ui.view">
+			<field name="name">iut_tdsi_class_tree</field>
+			<field name="model">iut.class</field>
+			<field name="priority">2</field>
+			<field name="arch" type="xml">
+				<tree string="Class Orders">
+					<field name="name"/>
+					<field name="student_nb"/>
+					<field name="level"/>
+				</tree>
+			</field>
+		</record>
+		<record id="view_device_form" model="ir.ui.view">
+			<field name="name">iut_tdsi_class_form</field>
+			<field name="model">iut.class</field>
+			<field name="arch" type="xml">
+				<form string="FORM class">
+					<sheet>	
+						<group>
+							<field name="name"/>
+						</group>
+						<group>
+							<field name="student_nb"/>
+							<field name="level"/>
+						</group>
+
+						<notebook>
+							<page name="student_ids" string="Elèves">
+								<tree string="Elèves">
+									<field name="student_ids"/>
+								</tree>
+							</page>
+							<page name="teacher_ids" string="Professeurs">
+								<tree string="Professeurs">
+									<field name="teacher_ids"/>
+								</tree>
+							</page>
+							<page name="schedule_ids" string="Cours">
+								<tree string="Cours">
+									<field name="schedule_ids"/>
+								</tree>
+							</page>
+						</notebook>													
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

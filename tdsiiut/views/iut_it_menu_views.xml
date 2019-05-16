@@ -1,0 +1,11 @@
+<odoo>
+	<data>
+		<menuitem name="Lycée" id="menu_iut_root" />
+		<menuitem name="Configuration" parent="menu_iut_root" id="ssmenu_iut_root"/>
+		<menuitem id="class_iut_root" parent="ssmenu_iut_root" action="iutclass_action"/>
+		<menuitem id="student_iut_root" parent="ssmenu_iut_root" action="iutstudent_action"/>
+		<menuitem id="course_iut_root" parent="ssmenu_iut_root" action="iutcourse_action"/>
+		<menuitem id="respatner_iut_root" parent="ssmenu_iut_root" action="iutrespartner_action"/>
+		<menuitem id="schedule_iut_root" parent="ssmenu_iut_root" action="iutschedule_action"/>
+	</data>
+</odoo>
